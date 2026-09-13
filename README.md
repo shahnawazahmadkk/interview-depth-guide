@@ -21,7 +21,9 @@ The repository root is the skill folder. You can install it by cloning the repos
 
 On Windows, run these commands in PowerShell:
 
-``` you can clone this and ask you codex/claude to install it.```
+``` you can clone this and ask you codex/claude to install it. 
+OR Follow below steps.
+```
 
 ```powershell
 $clonePath = "$env:TEMP\engineering-interview-depth-coach"
