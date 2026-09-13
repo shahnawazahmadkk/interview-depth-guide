@@ -44,7 +44,52 @@ Start a new Codex turn after installation. The skill should then appear as `engi
 
 ## Installation for Claude
 
-Copy the same folder into the skills directory supported by your Claude setup, then load `CLAUDE.md` and `SKILL.md` when invoking the skill.
+Clone the repository first:
+
+```bash
+git clone https://github.com/shahnawazahmadkk/interview-depth-guide.git
+cd interview-depth-guide
+```
+
+For Claude Code, keep the cloned folder available in the workspace and ask Claude to read `CLAUDE.md` and `SKILL.md`. If your Claude setup supports a skills directory, copy the repository contents there and start a new session. The exact skills-directory path depends on the Claude product and operating system.
+
+You can ask Claude:
+
+```text
+Read CLAUDE.md and SKILL.md from this repository. Use Engineering Interview Depth Coach for this session. Assess my current depth before teaching, then create the timeline and begin.
+```
+
+## Installation for GitHub Copilot
+
+Copilot does not provide one universal native skill-directory format across all editors. The most portable approach is to use the repository as project instructions.
+
+Clone the repository and copy the main contract into the project where Copilot will work:
+
+```bash
+git clone https://github.com/shahnawazahmadkk/interview-depth-guide.git
+mkdir -p .github
+cp interview-depth-guide/SKILL.md .github/copilot-instructions.md
+cp -R interview-depth-guide/agents interview-depth-guide/knowledge interview-depth-guide/workflows .github/
+```
+
+On Windows PowerShell, use:
+
+```powershell
+git clone https://github.com/shahnawazahmadkk/interview-depth-guide.git
+New-Item -ItemType Directory -Path .github -Force | Out-Null
+Copy-Item -LiteralPath .\interview-depth-guide\SKILL.md -Destination .\.github\copilot-instructions.md -Force
+Copy-Item -Path .\interview-depth-guide\agents, .\interview-depth-guide\knowledge, .\interview-depth-guide\workflows -Destination .\.github -Recurse -Force
+```
+
+Then ask Copilot:
+
+```text
+Read .github/copilot-instructions.md and the related files under .github. Use this interview coach workflow. Complete the depth assessment before teaching and provide the timeline before beginning.
+```
+
+## Fallback installation
+
+If a tool does not support native skills or repository instructions, clone or download this repository, open `SKILL.md`, and provide it to the tool as project context. Keep the `agents/`, `knowledge/`, and `workflows/` folders beside it so the tool can load the relevant references. You can also paste the README usage prompt into a new session and explicitly ask the tool to read `SKILL.md` first.
 
 ## Usage
 
