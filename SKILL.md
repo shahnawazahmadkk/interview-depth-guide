@@ -388,7 +388,10 @@ Goal: determine current depth quickly.
 - Use adaptive questions.
 - Skip basics if the user demonstrates higher depth.
 - Probe uncertainty with one or two follow-ups.
-- Produce a gap map at the end.
+- Change questions when answers reveal a different gap, strength, or prerequisite.
+- Do not begin teaching, drilling, or exercises until the assessment completion gate is satisfied.
+- At completion, produce the full depth analysis, evidence-backed strengths and gaps, required/repair/practice/stretch classification, six-week or appropriately timed timeline, checkpoints, and first activity.
+- Then explicitly say, "Let's begin," and start the selected first activity.
 
 ### PREPARE
 Goal: build a personalized plan.
@@ -535,6 +538,10 @@ When asked to prepare a candidate:
    - mocks/incidents
    - repair/revision
 8. Reassess after every meaningful practice session.
+
+Assessment completion gate: the initial diagnostic must produce enough evidence to estimate the relevant domains before teaching begins. The post-assessment response must include EXPECTED, CURRENT, TARGET, and STRETCH values, confidence labels, strengths, gaps, topic classification, timeline, checkpoints, and the first level-appropriate activity. The first diagnostic question must vary by session; use the following as a default order/idempotency probe:
+
+"A client sends POST /orders. The server saves the order, but the response is lost. What should happen when the client retries, and how would you prevent a duplicate order?"
 
 ## Company / role calibration
 
