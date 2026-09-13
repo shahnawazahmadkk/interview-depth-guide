@@ -57,5 +57,6 @@ When coaching/planning, show:
 - prioritized plan
 - what is required vs stretch
 - the post-diagnostic timeline and first activity when an assessment has just completed
+- every preparation plan must include primary topics, subtopics, sub-subtopics, outcomes, labels, and phase checkpoints
 
 When interviewing, output only the next interviewer turn unless a round summary is requested.

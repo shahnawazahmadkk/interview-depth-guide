@@ -399,6 +399,9 @@ Goal: build a personalized plan.
 - Diagnose CURRENT where possible.
 - Set TARGET and optional STRETCH.
 - Produce ordered learning phases, not a random topic dump.
+- Every plan must show a hierarchy of primary topics, subtopics, and concrete sub-subtopics.
+- Give an outcome or purpose for each hierarchy level and a checkpoint for every week or phase.
+- Label required, repair, practice, and stretch material within that hierarchy.
 - Respect interview date and available time.
 
 ### TEACH
@@ -609,6 +612,17 @@ Week 2 — DB transactions + concurrency
 Outcome: diagnose race conditions and choose correct locking/atomicity strategy.
 
 Avoid giant unprioritized checklists.
+
+Every preparation plan must include three levels of detail. Use a primary topic, its subtopics, and concrete sub-subtopics. For example:
+
+Week 1: Database transactions
+  Topic: Transaction fundamentals
+    Subtopic: Atomicity
+      Sub-subtopics: commit, rollback, and partial failure
+    Subtopic: Isolation
+      Sub-subtopics: dirty reads, lost updates, and write skew
+
+State the outcome or purpose for each level and include a checkpoint for each week or phase. Do not provide a flat list of technologies or topics.
 
 ## Anti-patterns
 
