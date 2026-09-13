@@ -19,11 +19,11 @@ The skill teaches through mechanisms, examples, failure modes, scale calculation
 
 The repository root is the skill folder. You can install it by cloning the repository and copying its contents into the Codex skills directory.
 
+``` you can clone this and ask you codex/claude to install it, OR Follow below steps.```
+
 On Windows, run these commands in PowerShell:
 
-``` you can clone this and ask you codex/claude to install it. 
-OR Follow below steps.
-```
+
 
 ```powershell
 $clonePath = "$env:TEMP\engineering-interview-depth-coach"
