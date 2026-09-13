@@ -17,20 +17,28 @@ The skill teaches through mechanisms, examples, failure modes, scale calculation
 
 ## Installation for Codex
 
-Copy the `engineering-interview-skill` folder into your Codex skills directory.
+The repository root is the skill folder. You can install it by cloning the repository and copying its contents into the Codex skills directory.
 
-On Windows, run:
+On Windows, run these commands in PowerShell:
 
 ```powershell
+$clonePath = "$env:TEMP\engineering-interview-depth-coach"
+git clone https://github.com/shahnawazahmadkk/interview-depth-guide.git $clonePath
 $destination = "$env:USERPROFILE\.codex\skills\engineering-interview-depth-coach"
-Copy-Item -LiteralPath .\engineering-interview-skill -Destination $destination -Recurse
+New-Item -ItemType Directory -Path $destination -Force | Out-Null
+Copy-Item -Path "$clonePath\*" -Destination $destination -Recurse -Force
 ```
 
 On macOS or Linux, run:
 
 ```bash
-cp -R ./engineering-interview-skill "$HOME/.codex/skills/engineering-interview-depth-coach"
+clone_path="${TMPDIR:-/tmp}/engineering-interview-depth-coach"
+git clone https://github.com/shahnawazahmadkk/interview-depth-guide.git "$clone_path"
+mkdir -p "$HOME/.codex/skills/engineering-interview-depth-coach"
+cp -R "$clone_path"/* "$HOME/.codex/skills/engineering-interview-depth-coach/"
 ```
+
+If you already downloaded the repository, replace the clone path with the extracted folder path. If you are inside a local checkout, copy the repository contents with `Copy-Item -Path .\* -Destination $destination -Recurse -Force` on Windows or `cp -R ./* "$HOME/.codex/skills/engineering-interview-depth-coach/"` on macOS or Linux.
 
 Start a new Codex turn after installation. The skill should then appear as `engineering-interview-depth-coach`.
 
@@ -53,7 +61,7 @@ You can also request a one-question drill, a system-design mock interview, a pro
 Validate the skill after changes with:
 
 ```bash
-python C:/Users/DELL/.codex/skills/.system/skill-creator/scripts/quick_validate.py ./engineering-interview-skill
+python C:/Users/DELL/.codex/skills/.system/skill-creator/scripts/quick_validate.py .
 ```
 
 The learning references are original and generic. They exclude personal identities, account details, testimonials, and external source branding. Technology names remain where required for accurate instruction.
