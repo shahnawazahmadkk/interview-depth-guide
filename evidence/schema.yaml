@@ -1,0 +1,34 @@
+version: 1
+interview_evidence:
+  company: string
+  role: string
+  approximate_level: string|null
+  location: string|null
+  date: date|null
+  source:
+    type: official|job_description|candidate_report|community|curated
+    reference: string|null
+  round:
+    type: coding|hld|lld|domain|behavioral|debugging|unknown
+    opening_prompt: string|null
+  observations:
+    - domain: string
+      concept: string
+      follow_up: string|null
+      inferred_depth: D0|D1|D2|D3|D4|D5|D6
+      confidence: low|medium|high
+  overall_confidence: low|medium|high
+  freshness: current|recent|old|unknown
+  notes: string|null
+
+company_level_profile:
+  company: string
+  role: string
+  level: string|null
+  updated_at: date
+  domains:
+    - domain: string
+      expected_depth: D0|D1|D2|D3|D4|D5|D6
+      relevance: low|medium|high
+      confidence: low|medium|high
+      evidence_count: integer|null
